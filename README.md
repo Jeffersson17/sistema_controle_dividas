@@ -31,7 +31,7 @@ Este projeto foi desenvolvido como parte de uma **atividade de extensão da Facu
 1. Clone o repositório:
    ```bash
    git clone https://github.com/Jeffersson17/sistema_controle_dividas.git
-   cd sistema-controle-dividas
+   cd sistema_controle_dividas
 
 2. Inicie o projeto:
     ```bash
