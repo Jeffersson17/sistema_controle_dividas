@@ -62,7 +62,7 @@ Este projeto usa o pacote `SimpleJWT` para autenticação baseada em tokens JWT.
 │   │   └── views.py # Views da API
 │   ├── debt_control/
 │   │   ├──requirements/
-│   │   │    └──main.txt # Requisitos que serão instalados ao iniciar o container
+│   │   │    └──main.txt # Dependências instaladas no container
 │   │   ├── settings.py
 │   │   ├── urls.py # Todas as rotas do projeto
 │   │   ├── asgi.py
