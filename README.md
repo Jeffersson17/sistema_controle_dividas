@@ -48,6 +48,7 @@ Este projeto usa o pacote `SimpleJWT` para autenticação baseada em tokens JWT.
 
 ## 🗃️ Estrutura do Projeto
 
+```text
 .
 ├── django/
 │   ├── client/
