@@ -3,6 +3,7 @@ import uuid
 from django.db import models
 from decimal import Decimal
 
+
 class Client(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=100)
@@ -25,6 +26,7 @@ class Client(models.Model):
         ordering = ["name"]
         verbose_name = "Cliente"
         verbose_name_plural = "Clientes"
+
 
 class Historical(models.Model):
     client = models.ForeignKey(Client, on_delete=models.CASCADE, related_name='historicos')
