@@ -1,0 +1,17 @@
+FROM python:3.11-slim
+
+WORKDIR /api
+
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get install -y build-essential libpq-dev && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY django/debt_control/requirements/main.txt .
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r main.txt
+
+EXPOSE 8080
+
+COPY django/ /api/
+
+CMD ["gunicorn", "debt_control.wsgi:application", "--bind", "0.0.0.0:8080"]

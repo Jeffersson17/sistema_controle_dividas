@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 import datetime
+import dj_database_url
 import os
 from pathlib import Path
 
@@ -27,7 +28,7 @@ SECRET_KEY = "django-insecure-vz6c9^-!m+ucysf_9_eq-$t%p8io%n5rkl^aheqxjf%5x-twj6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '10.0.0.175']
+ALLOWED_HOSTS = ["sistema-controle-dvidas.fly.dev"]
 
 
 # Application definition
@@ -79,9 +80,9 @@ WSGI_APPLICATION = "debt_control.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.getenv("POSTGRES_DB", "debt_control"),
-        "USER": os.getenv("POSTGRES_USER", "debt_user"),
-        "PASSWORD": os.getenv("POSTGRES_PASSWORD", "debtcontrol"),
+        "NAME": os.getenv("POSTGRES_DB"),
+        "USER": os.getenv("POSTGRES_USER"),
+        "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
         "HOST": os.getenv("POSTGRES_HOST", "localhost"),
         "PORT": os.getenv("POSTGRES_PORT", "5432"),
     }
